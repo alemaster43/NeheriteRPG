@@ -1,0 +1,5 @@
+name: RPG
+version: '${project.version}'
+main: net.neherite.Main
+api-version: 1.17
+authors: [ Hahatyn, Jung ]
