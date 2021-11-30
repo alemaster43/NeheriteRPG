@@ -15,8 +15,7 @@ public class PointsManager {
         if(plugin.data.getPoints(uuid) <= 100000 && p.isOnline()) {
             plugin.data.setPoints(uuid, amount);
         } else if(plugin.data.getPoints(uuid) >= 100000 && p.isOnline()) {
-            p.sendMessage(Main.getInstance().getConfig().getString("messages.playerfullpoints"));
-            p.sendMessage(Main.getInstance().getDataFolder()+"messages.playerfullpoints");
+            p.sendMessage("Тут будет сообщение из конфига");
         }
     }
 

@@ -26,13 +26,13 @@ public class SQLGetter {
             e.printStackTrace();
         }
     }
-/*
-  CLASS - это класс
-  LEVEL - уровень игроков
-  LEVELAB - уровень способности
-  POINTS - сколько очков у игрока
-  COOLDOWN - перезарядка(фактическое ее сохранение, чтобы не абузить перезарядку)
-*/
+    /*
+      CLASS - это класс
+      LEVEL - уровень игроков
+      LEVELAB - уровень способности
+      POINTS - сколько очков у игрока
+      COOLDOWN - перезарядка(фактическое ее сохранение, чтобы не абузить перезарядку)
+    */
     public void createPlayer(Player player){
         try {
             UUID uuid = player.getUniqueId();

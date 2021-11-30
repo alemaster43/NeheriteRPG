@@ -36,10 +36,10 @@ public final class Main extends JavaPlugin {
         this.pm = new PointsManager(this);
 
 
-    //База данных MySQL
-    //Начало
-    this.SQL = new MySQL();
-    this.data = new SQLGetter(this);
+        //База данных MySQL
+        //Начало
+        this.SQL = new MySQL();
+        this.data = new SQLGetter(this);
         try {
             SQL.connect();
         } catch (ClassNotFoundException | SQLException e) {
@@ -50,8 +50,8 @@ public final class Main extends JavaPlugin {
             Bukkit.getLogger().info(ChatColor.GREEN + "NeheriteRPG: Воу! Всё работает, база данных подключилась!");
             data.createTable();
         }
-    //Конец
-    //База данных MySQL
+        //Конец
+        //База данных MySQL
 
 
     }
