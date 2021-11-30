@@ -1,4 +1,4 @@
-package net.neherite.dead;
+package net.neherite.managers;
 
 import net.neherite.Main;
 import net.neherite.utils.Cuboid;

@@ -1,6 +1,7 @@
 package net.neherite;
 
-import net.neherite.dead.DeadManager;
+import net.neherite.managers.DeadManager;
+import net.neherite.managers.PointsManager;
 import net.neherite.sql.MySQL;
 import net.neherite.sql.SQLGetter;
 import net.neherite.utils.Hologram;
@@ -12,16 +13,27 @@ import java.sql.SQLException;
 
 public final class Main extends JavaPlugin {
 
+    private static Main instance;
+
     public MySQL SQL;
     public SQLGetter data;
+
+    public PointsManager pm;
+
+    public static Main getInstance() {
+        return instance;
+    }
 
     @Override
     public void onEnable() {
         saveDefaultConfig();
+        instance = this;
+
 
         Bukkit.getPluginManager().registerEvents(new Hologram(),this);
         Bukkit.getPluginManager().registerEvents(new DeadManager(this),this);
 
+        this.pm = new PointsManager(this);
 
 
     //База данных MySQL
@@ -48,4 +60,5 @@ public final class Main extends JavaPlugin {
     public void onDisable() {
 
     }
+
 }
