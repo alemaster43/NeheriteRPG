@@ -1,7 +1,9 @@
 package net.neherite;
 
+import net.neherite.dead.DeadManager;
 import net.neherite.sql.MySQL;
 import net.neherite.sql.SQLGetter;
+import net.neherite.utils.Hologram;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -16,6 +18,9 @@ public final class Main extends JavaPlugin {
     @Override
     public void onEnable() {
         saveDefaultConfig();
+
+        Bukkit.getPluginManager().registerEvents(new Hologram(),this);
+        Bukkit.getPluginManager().registerEvents(new DeadManager(this),this);
 
 
 
