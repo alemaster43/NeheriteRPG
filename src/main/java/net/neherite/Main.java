@@ -1,6 +1,7 @@
 package net.neherite;
 
 import net.neherite.managers.DeadManager;
+import net.neherite.managers.LevelManager;
 import net.neherite.managers.PointsManager;
 import net.neherite.sql.MySQL;
 import net.neherite.sql.SQLGetter;
@@ -19,6 +20,7 @@ public final class Main extends JavaPlugin {
     public SQLGetter data;
 
     public PointsManager pm;
+    public LevelManager lm;
 
     public static Main getInstance() {
         return instance;
@@ -34,6 +36,7 @@ public final class Main extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(new DeadManager(this),this);
 
         this.pm = new PointsManager(this);
+        this.lm = new LevelManager(this);
 
 
         //База данных MySQL
